@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(new LoginApp());
+//void main() => runApp(new LoginApp());
 
 class LoginApp extends StatelessWidget {
   @override
@@ -15,10 +15,12 @@ class LoginApp extends StatelessWidget {
           new Text("欢迎你"),
           new Text("请先输入手机号"),
           new EditableText(
-              controller: new TextEditingController.fromValue(null),
-              focusNode: null,
-              style: null,
-              cursorColor: null)
+            controller: new TextEditingController(),
+            focusNode: null,
+            style: null,
+            cursorColor: null,
+            keyboardType: TextInputType.number,
+          )
         ],
       ),
     );
@@ -26,16 +28,6 @@ class LoginApp extends StatelessWidget {
 
 }
 
-class NumController extends TextEditingController {
-  @override
-  void set value(TextEditingValue newValue) {
-    // TODO: implement value
-    super.value = newValue;
-  }
-}
-
-class NumEditValue extends TextEditingValue{
-}
 
 
 
